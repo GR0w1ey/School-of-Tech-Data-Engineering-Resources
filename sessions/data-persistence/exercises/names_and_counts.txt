@@ -1,0 +1,4 @@
+Name: John, Count: 4
+Name: James, Count: 1
+Name: Sally, Count: 2
+Name: Mark, Count: 1

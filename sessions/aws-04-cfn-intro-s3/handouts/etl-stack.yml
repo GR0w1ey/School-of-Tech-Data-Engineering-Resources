@@ -1,0 +1,13 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >
+  MysteryShopper S3 Cloudformation example for AWS week in the Data Engineering Software Academy
+
+Parameters:
+  YourName:
+    Type: String
+    Description: Enter your name in format 'first-last' to customise the way your resources are named
+    Default: rory-gilmore
+
+Resources:
+  # TODO add ShopperRawDataBucket
+  # TODO Add ShopperRawDataBucketPolicy

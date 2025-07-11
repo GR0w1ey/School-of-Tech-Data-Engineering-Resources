@@ -1,0 +1,27 @@
+version: "2"
+services:
+  grafana:
+    image: docker.io/grafana/grafana:latest
+    networks:
+      - monitoring_network
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana:/var/lib/grafana
+  data_source:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - monitoring_network
+    volumes:
+      - ./app.py:/app/app.py
+    ports:
+      - "5000:5000"
+
+volumes:
+  grafana:
+
+networks:
+  monitoring_network:
+    driver: bridge
